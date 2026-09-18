@@ -369,14 +369,10 @@
         <h2>¿Hablamos de lo que necesitas?</h2>
         <p>Cuéntame tu idea —una frase basta para empezar— y te respondo enseguida.</p>
         <div class="contact__actions">
-          <a href="mailto:hola@wictor.pro" class="btn btn--light">Escríbeme</a>
-          <!-- WhatsApp (recomendado para primeros contactos): descomenta y pon tu número con prefijo, sin + ni espacios.
-          <a href="https://wa.me/34600000000" target="_blank" rel="noopener" class="btn btn--outline-dark">WhatsApp</a>
-          -->
+          <a href="https://wa.me/34696705180?text=Hola%20V%C3%ADctor%2C%20te%20escribo%20desde%20wictor.pro%20%F0%9F%91%8B" target="_blank" rel="noopener" class="btn btn--light">Escríbeme por WhatsApp</a>
         </div>
         <div class="contact__mail">
-          <span id="email">hola@wictor.pro</span>
-          <button class="copy-btn" id="copyBtn" type="button">Copiar</button>
+          <a href="https://wa.me/34696705180?text=Hola%20V%C3%ADctor%2C%20te%20escribo%20desde%20wictor.pro%20%F0%9F%91%8B" target="_blank" rel="noopener">696 70 51 80</a>
         </div>
       </div>
     </div>
@@ -401,16 +397,6 @@
   window.addEventListener('load', function () {
     document.querySelectorAll('.reveal').forEach(function (el, i) {
       setTimeout(function () { el.classList.add('in'); }, 80 + i * 70);
-    });
-  });
-
-  var copyBtn = document.getElementById('copyBtn');
-  copyBtn.addEventListener('click', function () {
-    var email = document.getElementById('email').textContent.trim();
-    navigator.clipboard.writeText(email).then(function () {
-      var prev = copyBtn.textContent;
-      copyBtn.textContent = 'Copiado';
-      setTimeout(function () { copyBtn.textContent = prev; }, 1600);
     });
   });
 
