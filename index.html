@@ -232,7 +232,7 @@
   <section class="hero">
     <div class="container">
       <span class="status reveal"><span class="dot"></span> Cojo un proyecto más ahora mismo</span>
-      <h1 class="reveal">Que te encuentren y te elijan en internet.</h1>
+      <h1 class="reveal">Ayuda cercana para todo lo digital.</h1>
       <p class="hero__lead reveal">Soy Víctor. Ayudo a negocios y personas a dar el salto a lo digital sin agobios: tu web, tu presencia online y esas tareas que podrían funcionar solas.</p>
       <div class="hero__cta reveal">
         <a href="#contacto" class="btn btn--primary">Hablemos</a>
@@ -403,6 +403,19 @@
   window.addEventListener('load', function () {
     document.querySelectorAll('.reveal').forEach(function (el, i) {
       setTimeout(function () { el.classList.add('in'); }, 80 + i * 70);
+    });
+  });
+
+  var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = link.getAttribute('href').slice(1);
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'start' });
+      history.pushState(null, '', '#' + id);
     });
   });
 
