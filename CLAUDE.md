@@ -2,6 +2,10 @@
 
 Guía para Claude Code y sus subagentes. Léela antes de trabajar en este repo.
 
+## ⭐ Regla de oro: paridad español ↔ inglés
+La web es **bilingüe**: español en `index.html` (raíz, `/`) e inglés en `en/index.html` (`/en/`).
+**Cada cambio que afecte a una versión debe replicarse en la otra en el mismo commit.** Si tocas contenido, estructura, estilos, meta o scripts en una, aplícalo también en la otra (traduciendo el copy al tono equivalente, no literal). Nunca dejes una de las dos desactualizada. Ambas comparten diseño y `hreflang`; el selector de idioma (`.lang`) las enlaza.
+
 ## Qué es
 Web de presencia de **Víctor**, profesional autónomo de **servicios informáticos y digitales** en **Madrid**. Dominio `wictor.pro` (alojado en Vercel).
 
@@ -14,7 +18,7 @@ Objetivo actual: tener una página cuidada y clara a la que dirigir a los **prim
 
 ## Reglas de la web
 - Sitio **estático**: HTML + CSS + JS, **sin framework y sin build**. Se despliega tal cual en Vercel.
-- Todo vive en `index.html` (estilos en `<style>`, script en `<script>`). Único recurso externo permitido: Google Fonts.
+- Dos páginas gemelas: `index.html` (español, `/`) y `en/index.html` (inglés, `/en/`). Cada una es autónoma: estilos en su `<style>` y script en su `<script>`. Único recurso externo permitido: Google Fonts. Mantenerlas en paridad (ver Regla de oro).
 - Sistema de diseño en las variables `:root` de `index.html`. Tipografías: `Bricolage Grotesque` (titulares) + `Instrument Sans` (texto). Un solo color de acento.
 - Calidad base: responsive, foco de teclado visible, `prefers-reduced-motion`, contraste accesible, HTML semántico.
 - La sección **Proyectos está oculta** a propósito (clase `is-hidden` + atributo `hidden`). Activarla solo cuando haya casos reales presentables.
