@@ -1,21 +1,21 @@
 /* wictor.pro — "Aquí no hay cookies que aceptar".
    Sello permanente en el pie + tarjeta de una sola vez en la home.
    Sin dependencias, sin red, sin cookies: solo localStorage (y con try/catch) para no repetir la tarjeta.
-   Si añades analítica o un tercero que reciba datos, revisa que este texto siga siendo verdad. */
+   Si cambias qué recoge analytics.js o añades un tercero que reciba datos, revisa que este texto siga siendo verdad. */
 (function () {
   'use strict';
   var en = (document.documentElement.lang || 'es').slice(0, 2) === 'en';
   var T = en
     ? {
         title: 'No cookies to accept here',
-        body: 'because we use no trackers or ads.',
+        body: 'because we use no trackers or ads. We only count visits, anonymously and without cookies.',
         close: 'Close',
         bite: 'Take a bite of the cookie',
         eaten: "Relax, it wasn't a real cookie."
       }
     : {
         title: 'Aquí no hay cookies que aceptar',
-        body: 'porque no usamos rastreadores ni publicidad.',
+        body: 'porque no usamos rastreadores ni publicidad. Solo contamos visitas, de forma anónima y sin cookies.',
         close: 'Cerrar',
         bite: 'Dale un mordisco a la galleta',
         eaten: 'Tranquilo, no era una cookie de verdad.'
